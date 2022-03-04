@@ -309,7 +309,7 @@ async function machine_subtitles(type) {
     if (type == "DeepL") {
         for (var l in s_sentences) {
             let options = {
-                url: "https://api-free.deepl.com/v2/translate",
+                url: "https://api.deepl.com/v2/translate",
                 method: "POST",
                 body: `auth_key=${setting.dkey}${setting.sl == "auto" ? "" : `&source_lang=${setting.sl}`}&target_lang=${setting.tl}${s_sentences[l].join("")}`
             }
